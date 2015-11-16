@@ -41,17 +41,22 @@
 }
 
 .post {
-  width: 140px;
+  width: 620px;
   border: 1px solid black;
-  display: inline-block;
-  overflow: hidden;
   border-radius: 10px;
+  margin: 0 auto;
+  background-color: #E1E0DD;
+}
+
+.body {
+  margin: 10px;
+  font-family: Helvetica;
 }
 
 .title {
   text-align: center;
-  margin-bottom: 5px;
-  color: white;
+  margin: 10px;
+  color: black;
   font-family: Helvetica;
 }
 
@@ -60,10 +65,14 @@
   border-bottom: 1px solid black;
 
 }
-.icon-2 {
+.icon {
   margin-right: 10%;
 }
 
+.search {
+  /* take up the rest of the remaining space */
+  flex: 1;
+}
 
 .search input {
   width: 20%;
@@ -86,4 +95,18 @@ background-color: #001F3F;
   100% {
 background-color: #FF4136;
   }
+}
+
+input {
+  display: block;
+}
+
+.form_title {
+  width: 300px;
+  display: block;
+}
+
+.form_body {
+  width: 300px;
+  height: 300px;
 }

@@ -1,0 +1,26 @@
+<div class="container">
+
+<%= link_to 'New Post', new_post_path(@post) %>
+
+<% @posts.each do |post| %>
+<div class="post">
+  <div class="title">
+    <%= post.title %>
+  </div>
+  <hr>
+  <div class="body">
+    <%= post.body%>
+  </div>
+  <%= link_to 'Edit Post', edit_post_path(post)%>
+</div>
+
+<% end %>
+
+
+
+
+
+
+
+
+</div>
