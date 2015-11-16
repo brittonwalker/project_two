@@ -7,9 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+  <div class="bar">
+    <div class="icon icon-1"><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></div>
+    <% else %>
+    <div class="icon icon-2"><%= link_to 'Login', new_user_session_path %></div>
+    <div class="icon icon-3"><%= link_to 'Signup', new_user_registration_path %></div>
+    <div class="username">
+    </div>
+    <div class="search">
+      <input type="search" placeholder="search..." />
+    </div>
+    <% end %>
+  </div>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <div class="container">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
+
 <%= yield %>
 
 </body>
