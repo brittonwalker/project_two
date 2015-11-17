@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, :except => [:show, :index]
+  before_filter :find_user
 
   def index
+    @user = current_user
     @posts = Post.all
   end
 
@@ -44,4 +47,7 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :body)
   end
 
+  def find_user
+    @user = current_user
+  end
 end

@@ -60,19 +60,12 @@
   font-family: Helvetica;
 }
 
-.post_image {
-  width: 140px;
-  border-bottom: 1px solid black;
-
-}
 .icon {
   margin-right: 10%;
+  text-decoration: none;
 }
 
-.search {
-  /* take up the rest of the remaining space */
-  flex: 1;
-}
+
 
 .search input {
   width: 20%;
@@ -104,9 +97,18 @@ input {
 .form_title {
   width: 300px;
   display: block;
+  background-color: #E1E0DD;
+
 }
 
 .form_body {
   width: 300px;
-  height: 300px;
+}
+
+.username {
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
 }
