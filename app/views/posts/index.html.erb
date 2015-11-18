@@ -5,17 +5,18 @@
 <% @posts.each do |post| %>
 <div class="post">
   <div class="title element">
-    <%= post.title %>
+
+    <div class="create"><%= post.user.email %> said: </div><%= post.title %>
   </div>
   <div class="body">
     <%= post.body%>
+
   </div>
 
   <% post.comments.each do |comment| %>
+  <%= comment.user.email %>
 
-  <div class="body">
-  <%= @user ? @user.email + " said: " + comment.content : "Anonymous" + " said: " + comment.content %><br>
-  </div>
+
   <% end %>
   <div class="body">
 

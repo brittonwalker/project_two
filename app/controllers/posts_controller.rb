@@ -1,9 +1,8 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, :except => [:show, :index]
-  before_filter :find_user
+
 
   def index
-    @user = current_user
     @posts = Post.all
     @post = Post.where(params[:id])
   end
@@ -17,7 +16,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
+    @post = current_user.posts.create!(post_params)
     redirect_to root_path
   end
 
@@ -39,17 +38,18 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
 
+
     redirect_to posts_path
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :user_id)
   end
 
-  def find_user
-    @user = current_user
-  end
+  # def find_user
+  #   @user = current_user
+  # end
 
 end
