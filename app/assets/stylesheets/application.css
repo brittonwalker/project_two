@@ -102,7 +102,6 @@ input {
   width: 300px;
   display: block;
   background-color: #E1E0DD;
-
 }
 
 .form_body {
@@ -131,4 +130,11 @@ input {
 .form_body {
   margin: 0 auto;
   width: 90%;
+}
+
+.left {
+
+}
+.right {
+
 }
