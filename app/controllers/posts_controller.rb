@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   def index
     @user = current_user
     @posts = Post.all
+    @post = Post.where(params[:id])
   end
 
   def show
@@ -50,4 +51,5 @@ class PostsController < ApplicationController
   def find_user
     @user = current_user
   end
+
 end

@@ -6,10 +6,12 @@
   <div class="body">
     <%= @post.body %>
   </div>
-  <%= link_to 'Edit Post', edit_post_path(@post)%>
-  <%= link_to 'Destroy', post_path(@post),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
+  <%= form_for([@post, @post.comments.build]) do |f| %>
+      <%= f.label :content %><br>
+      <%= f.text_field :content %>
+
+      <%= f.submit %>
+  <% end %>
 </div>
   <%= link_to 'Back to Posts', posts_path %>
 </div>

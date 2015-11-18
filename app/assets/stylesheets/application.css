@@ -19,6 +19,7 @@
  }
  html {
    box-sizing: border-box;
+   font-family: helvetica;
  }
  html,
  body {
@@ -115,4 +116,19 @@ input {
 
 a {
   text-decoration: none;
+}
+
+input {
+  margin: 0 auto;
+  margin: 10px;
+}
+
+.form_title {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.form_body {
+  margin: 0 auto;
+  width: 90%;
 }
