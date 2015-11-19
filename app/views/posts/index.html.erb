@@ -14,21 +14,20 @@
   </div>
 
   <% post.comments.each do |comment| %>
-  <div class="body">
-  <%= comment.user.email + " said : "%><%= comment.content %><br>
+  <div class="comments">
+  <%= comment.user.email + " said : "%><%= comment.content %><%= link_to 'X', post_comments_path(comment), method: :delete %><br>
   </div>
 
   <% end %>
   <div class="body">
 
     <%= form_for([post, @comment]) do |f| %>
+      <div class="flex">
         <%= f.text_field :content %>
-
-        <%= f.submit %>
-
+        <%= f.submit 'Comment', class: 'button element' %>
+      </div>
         <% end %>
 
-  <%= link_to 'Add Comment', new_post_comment_path(post) %>
   <%= link_to 'Edit Post', edit_post_path(post)%>
   </div>
 </div>

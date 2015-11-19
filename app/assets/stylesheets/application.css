@@ -54,7 +54,6 @@
 .body {
   margin: 10px;
   font-family: Helvetica;
-
 }
 
 .title {
@@ -121,6 +120,7 @@ a {
 input {
   margin: 0 auto;
   margin: 10px;
+  display: block;
 }
 
 .form_title {
@@ -135,5 +135,28 @@ input {
 
 .create {
   font-size: 20px;
+}
 
+.button {
+  color: white;
+  border: none;
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+input:not([type=submit]) {
+  margin: 10px 0;
+  outline: none;
+  padding: 0;
+  border: 1px solid #DDDDDD;
+  font-size: 18px;
+}
+
+.flex {
+  display: flex;
+}
+
+.comments {
+  margin: 10px;
+  font-family: Helvetica;
 }
