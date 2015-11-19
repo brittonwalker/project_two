@@ -8,13 +8,22 @@
 </head>
 <body>
   <div class="bar element">
-    <div class="icon">
-    <%= link_to 'Home', root_path %>
-    </div>
-    <div class="icon icon-1"><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></div>
 
-    <div class="icon icon-2"><%= link_to 'Login', new_user_session_path %></div>
-    <div class="icon icon-3"><%= link_to 'Signup', new_user_registration_path %></div>
+    <div class="icon">
+      <%= link_to 'Home', root_path %>
+    </div>
+
+    <div class="icon icon-1">
+      <%= link_to 'Signout', destroy_user_session_path, :method => :delete %>
+    </div>
+
+    <div class="icon icon-2">
+      <%= link_to 'Login', new_user_session_path %>
+    </div>
+
+    <div class="icon icon-3">
+      <%= link_to 'Signup', new_user_registration_path %>
+    </div>
 
       <% if current_user %>
 
@@ -25,12 +34,17 @@
 
 
   <div class="container">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+    
+    <p class="notice">
+      <%= notice %>
+    </p>
+    <p class="alert">
+      <%= alert %>
+    </p>
 
   </div>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
