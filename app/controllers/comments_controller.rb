@@ -5,21 +5,13 @@ class CommentsController < ApplicationController
   def new
     @post = Post.find(params[:post_id])
     @comment = Comment.new
-    @user = current_user
   end
 
   def create
     @post = Post.find(params[:post_id])
-    @comment = @post.comments.create!(comment_params.merge(:post_id => @post))
-    @comment = current_user.comments.create!(comment_params)
-    redirect_to posts_path(@post, @comment)
+    @comment = @post.comments.create!(comment_params.merge(:user_id => current_user.id))
+    redirect_to posts_path
   end
-
-  # def show
-  #   @user = current_user
-  #   @post = Post.find(params[:post_id])
-  #   @comment = Comment.find(params[:id])
-  # end
 
   def destroy
     @post = Post.comments.find(params[:post_id])
@@ -36,11 +28,7 @@ class CommentsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :body)
-  end
-
-  def find_user
-    @user = current_user
+    params.require(:post).permit(:title, :body, :user_id)
   end
 
 end

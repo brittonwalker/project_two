@@ -5,6 +5,8 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @post = Post.where(params[:id])
+    @comment = Comment.new
+
   end
 
   def show

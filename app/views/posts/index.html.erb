@@ -1,38 +1,36 @@
 <div class="container">
-<div class="title post element">
-<%= link_to 'New Post', new_post_path(@post) %>
-</div>
-<% @posts.each do |post| %>
-<div class="post">
-  <div class="title element">
 
-    <div class="create"><%= post.user.email %> said: </div><%= post.title %>
-  </div>
-  <div class="body">
-    <%= post.body%>
-
+  <div class="title post element">
+  <%= link_to 'New Post', new_post_path(@post) %>
   </div>
 
-  <% post.comments.each do |comment| %>
-  <%= comment.user.email %>
+  <% @posts.each do |post| %>
 
+  <div class="post">
+
+    <div class="title element">
+
+      <div class="create">
+        <%= post.user.email %> said: </div><%= post.title %>
+      </div>
+
+    </div>
+
+    <div class="body">
+      <%= post.body%>
+      <% post.comments.each do |comment| %>
+      <%= comment.user.email %><%= comment.content %>
 
   <% end %>
-  <div class="body">
+      <%= form_for([post, @comment]) do |f| %>
+          <%= f.label :content %><br>
+          <%= f.text_field :content %>
 
-  <form class="new_comment" id="new_comment" action="/posts/<%= post.id %>/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token">
-        <label for="comment_content">Content</label><br>
-        <input type="text" name="comment[content]" id="comment_content">
+          <%= f.submit %>
 
-        <input type="submit" name="commit" value="Create Comment">
-  </form>
-
-  <div class="left"><%= link_to 'Add Comment', new_post_comment_path(post) %></div>
-  <div class="right"><%= link_to 'Edit Post', edit_post_path(post)%></div>
-  </div>
-</div>
-
-<% end %>
-
-
+          <% end %>
+    </div>
+  <%= link_to 'Add Comment', new_post_comment_path(post) %>
+  <%= link_to 'Edit Post', edit_post_path(post)%>
+  <% end %>
 </div>
