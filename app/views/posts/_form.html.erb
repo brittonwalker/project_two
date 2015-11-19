@@ -1,13 +1,14 @@
+<!-- beautified -->
 <div class="container">
-  <div class="post">
-<%= form_for @post do |f| %>
-  <%= f.label :title, class: "form_title" %>
-  <%= f.text_area :title, class: "form_title"%>
+    <div class="post">
+        <%= form_for @post do |f| %>
+        <%= f.label :title, class: "form_title" %>
+        <%= f.text_area :title, class: "form_title"%>
 
-  <%= f.label :body, class: "form_body" %>
-  <%= f.text_field :body, class: "form_body" %>
+        <%= f.label :body, class: "form_body" %>
+        <%= f.text_field :body, class: "form_body" %>
 
-  <%= f.submit %>
-<% end %>
-  </div>
+        <%= f.submit %>
+        <% end %>
+    </div>
 </div>
