@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
-
-gem 'cancancan', '~> 1.10'
+# Commenting out cancancan to see if that fixes the error.
+# Doesn't look like that fixed the issue. But I also stupidly trusted the internet and deleted my gems. So IDK.
+#gem 'cancancan', '~> 1.10'
 
 gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

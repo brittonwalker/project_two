@@ -1,38 +1,43 @@
+<!-- beautified -->
 <div class="container">
-<div class="title post element">
-<%= link_to 'New Post', new_post_path(@post) %>
-</div>
-<% @posts.each do |post| %>
-<div class="post">
-  <div class="title element">
+    <div class="title post element">
+        <%= link_to 'New Post', new_post_path(@post) %>
+    </div>
+    <% @posts.each do |post| %>
+    <div class="post">
+        <div class="title element">
+            <!-- The below line was throwing an error: NoMethodError in Posts#index
+Showing /Users/BryceLively/wdi/sandbox/project_two-1/app/views/posts/index.html.erb where line #9 raised:
 
-    <div class="create"><%= post.user.email %> said: </div><%= post.title %>
-  </div>
-  <div class="body">
-    <%= post.body%>
+undefined method `email' for nil:NilClass -->
+            <div class="create"><%= post.user.email %>
+                said:
+            </div><%= post.title %>
+        </div>
+        <div class="body">
+            <%= post.body%>
 
-  </div>
+        </div>
 
-  <% post.comments.each do |comment| %>
-  <div class="comments">
-  <%= comment.user.email + " said : "%><%= comment.content %><%= link_to 'X', post_comments_path(comment), method: :delete %><br>
-  </div>
+        <% post.comments.each do |comment| %>
+        <div class="comments">
+            <%= comment.user.email + " said : "%><%= comment.content %><%= link_to 'X', post_comments_path(comment), method: :delete %><br>
+        </div>
 
-  <% end %>
-  <div class="body">
-
-    <%= form_for([post, @comment]) do |f| %>
-      <div class="flex">
-        <%= f.text_field :content %>
-        <%= f.submit 'Comment', class: 'button element' %>
-      </div>
         <% end %>
+        <div class="body">
 
-  <%= link_to 'Edit Post', edit_post_path(post)%>
-  </div>
-</div>
+            <%= form_for([post, @comment]) do |f| %>
+            <div class="flex">
+                <%= f.text_field :content %>
+                <%= f.submit 'Comment', class: 'button element' %>
+            </div>
+            <% end %>
 
-<% end %>
+            <%= link_to 'Edit Post', edit_post_path(post)%>
+        </div>
+    </div>
 
+    <% end %>
 
 </div>
