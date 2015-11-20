@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-
   before_action :authenticate_user!
 
   def new
@@ -13,13 +12,17 @@ class CommentsController < ApplicationController
     redirect_to posts_path
   end
 
-  def destroy
-    @comment = Post.comments.find(params[:post_id])
-    @comment.destroy
-    # @comments = @post.comments.destroy
-
-    redirect_to posts_path
-  end
+  # def edit
+  #   @post = Post.find(params[:id])
+  #   @comment = Comment.find(params[:id])
+  # end
+  #
+  # def update
+  #   @post = Post.find(params[:post_id])
+  #   @comment = Comment.find(params[:id])
+  #   @comment.update(comment_params.merge(user:current_user))
+  #   redirect_to posts_path
+  # end
 
   private
 

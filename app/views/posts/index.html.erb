@@ -15,7 +15,7 @@
 
   <% post.comments.each do |comment| %>
   <div class="comments">
-  <%= comment.user.email + " said : "%><%= comment.content %><%#= link_to 'X', post_comments_path(@post, @comment), method: :delete %><br>
+  <%= comment.user.email + " said : "%><%= comment.content + "   "%><%#= link_to 'Edit', edit_post_comment_path(@post, comment) %><br>
   </div>
 
   <% end %>
