@@ -15,7 +15,7 @@
 
   <% post.comments.each do |comment| %>
   <div class="comments">
-  <%= comment.user.email + " said : "%><%= comment.content %><%= link_to 'X', post_comments_path(@post, @comment), method: :delete %><br>
+  <%= comment.user.email + " said : "%><%= comment.content %><%#= link_to 'X', post_comments_path(@post, @comment), method: :delete %><br>
   </div>
 
   <% end %>
@@ -27,8 +27,9 @@
         <%= f.submit 'Comment', class: 'button element' %>
       </div>
         <% end %>
-
+  <% if can? :update, post %>
   <%= link_to 'Edit Post', edit_post_path(post)%>
+  <% end %>
   </div>
 </div>
 

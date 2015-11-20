@@ -1,12 +1,11 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, :except => [:show, :index]
-
+  # before_action :authenticate_user!, :except => [:show, :index]
+  load_and_authorize_resource
 
   def index
     @posts = Post.all
     @post = Post.where(params[:id])
     @comment = Comment.new
-
   end
 
   def show
@@ -24,7 +23,6 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
-
   end
 
   def update

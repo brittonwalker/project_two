@@ -26,6 +26,7 @@
     <div class="icon icon-3">
       <%= link_to 'Signup', new_user_registration_path %>
     </div>
+    
     <% if current_user %>
       <%= current_user.email %>
     <% else %>
