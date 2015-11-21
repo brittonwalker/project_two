@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @posts = Post.all
+    @posts = Post.order('updated_at DESC').all
     @post = Post.where(params[:id])
     @comment = Comment.new
   end
