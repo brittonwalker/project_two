@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-  # before_action :authenticate_user!, :except => [:show, :index]
   load_and_authorize_resource
 
   def index
@@ -43,7 +42,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :user_id)
+    params.require(:post).permit(:title, :body, :user_id, :img_url)
   end
 
 end
