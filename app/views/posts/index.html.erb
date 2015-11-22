@@ -10,14 +10,14 @@
     <div class="create"><%= post.user.email %> said: </div><%= post.title %>
   </div>
   <div class="body">
-    <%#= image_tag post.img_url %>
+    <%= image_tag post.img_url %>
     <%= post.body%>
 
   </div>
 
   <% post.comments.each do |comment| %>
   <div class="comments">
-  <%= comment.user.email + " said : "%><%= comment.content + "   "%><%#= link_to 'Edit', edit_post_comment_path(@post, comment) %><br>
+  <%= comment.user.email + " said : "%><%= comment.content + "   "%><%= link_to 'Edit', edit_post_comment_path(@post, comment) %><br>
   </div>
 
   <% end %>
