@@ -163,3 +163,8 @@ input:not([type=submit]) {
 #draw {
   border: 1px solid black;
 }
+
+img {
+  margin: 0 auto;
+  max-width: 600px;
+}
