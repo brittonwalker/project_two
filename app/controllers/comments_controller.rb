@@ -18,7 +18,6 @@ class CommentsController < ApplicationController
   end
 
   def update
-    # @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
     @comment.update(comment_params.merge(user:current_user))
     redirect_to posts_path
@@ -28,10 +27,6 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:content, :post_id, :user_id)
-  end
-
-  def post_params
-    params.require(:post).permit(:title, :body, :user_id)
   end
 
 end
