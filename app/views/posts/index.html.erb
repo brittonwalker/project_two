@@ -10,7 +10,9 @@
     <div class="create"><%= post.user.email %> said: </div><%= post.title %>
   </div>
   <div class="body">
+    <% if post.img_url === true >
     <%= image_tag post.img_url %>
+    <% end %>
     <%= post.body%>
 
   </div>
