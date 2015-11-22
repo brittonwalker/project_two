@@ -1,16 +1,94 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or any plugin's vendor/assets/javascripts directory can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
-//
-// Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
-// about supported directives.
-//
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+  // This is a manifest file that'll be compiled into application.js, which will include all the files
+  // listed below.
+  //
+  // Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+  // or any plugin's vendor/assets/javascripts directory can be referenced here using a relative path.
+  //
+  // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+  // compiled file.
+  //
+  // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
+  // about supported directives.
+  //
+  //= require jquery
+  //= require jquery_ujs
+  //= require turbolinks
+  //= require_tree .
+  /*
+  /*
+   * Lazy Line Painter - Path Object
+   * Generated using 'SVG to Lazy Line Converter'
+   *
+   * http://lazylinepainter.info
+   * Copyright 2013, Cam O'Connell
+   *
+   */
+
+  var pathObj = {
+      "icon": {
+          "strokepath": [
+              {
+                  "path": "M68.804,11.994v71.004H54.403L27.401,37.196v45.803H13V11.994h14.401l27.001,45.803V11.994H68.804z",
+                  "duration": 600
+              },
+              {
+                  "path": "M114.602,83.898c-20.401,0-34.902-16.3-34.902-36.401c0-20.102,14.501-36.402,34.902-36.402   c20.401,0,34.902,16.301,34.902,36.402C149.504,67.598,135.003,83.898,114.602,83.898z M114.602,23.895   c-12.401,0-20.501,10.601-20.501,23.602c0,13,8.1,23.601,20.501,23.601s20.501-10.601,20.501-23.601   C135.104,34.496,127.003,23.895,114.602,23.895z",
+                  "duration": 600
+              },
+              {
+                  "path": "M208.402,24.795h-22.001v58.204H172V24.795h-22.001V11.994h58.403V24.795z",
+                  "duration": 600
+              },
+              {
+                  "path": "M256.1,24.795v14.801h25.901v12.801H256.1v30.602h-14.401V11.994h46.903v12.801H256.1z",
+                  "duration": 600
+              },
+              {
+                  "path": "M331.803,67.397h-28.102l-5.9,15.601H282.1l27.902-71.004h15.501l27.902,71.004h-15.701L331.803,67.397z M326.902,54.597   l-9.101-24.001l-9.2,24.001H326.902z",
+                  "duration": 600
+              },
+              {
+                  "path": "M404.303,61.097l11.801,6.9c-5.8,9.601-15.601,15.9-27.802,15.9c-19.501,0-33.602-16.3-33.602-36.401   c0-20.102,14.101-36.402,33.602-36.402c12.201,0,22.002,6.3,27.802,15.901l-11.801,6.8c-3.399-6-9-9.9-16.001-9.9   c-11.7,0-19.201,10.601-19.201,23.602c0,13,7.501,23.601,19.201,23.601C395.402,71.098,401.003,67.198,404.303,61.097z",
+                  "duration": 600
+              },
+              {
+                  "path": "M474.602,70.198v12.801h-49.703V11.994h49.203v12.801H439.3v14.801h28.102v12.801H439.3v17.801H474.602z",
+                  "duration": 600
+              },
+              {
+                  "path": "M541.901,61.597c0,16.201-9.101,21.401-23.701,21.401h-34.003V11.994c34.003,0,34.003,0,34.003,0   c12.801,0,20.9,6.2,20.9,19.501c0,4.7-1.399,8.5-7.9,12.601C535.001,46.096,541.901,50.396,541.901,61.597z M517.3,24.795h-18.701   v15.001H517.3c3.9,0,7.4-1.9,7.4-7.5C524.7,26.695,521.2,24.795,517.3,24.795z M527.5,61.397c0-7-4.3-8.801-9.101-8.801h-19.801   v17.601h19.801C523.2,70.198,527.5,68.397,527.5,61.397z",
+                  "duration": 800
+              },
+              {
+                  "path": "M583.999,83.898c-20.401,0-34.902-16.3-34.902-36.401c0-20.102,14.501-36.402,34.902-36.402   c20.4,0,34.901,16.301,34.901,36.402C618.9,67.598,604.399,83.898,583.999,83.898z M583.999,23.895   c-12.401,0-20.502,10.601-20.502,23.602c0,13,8.101,23.601,20.502,23.601c12.4,0,20.501-10.601,20.501-23.601   C604.5,34.496,596.399,23.895,583.999,23.895z",
+                  "duration": 600
+              },
+              {
+                  "path": "M661.598,83.898c-20.401,0-34.902-16.3-34.902-36.401c0-20.102,14.501-36.402,34.902-36.402s34.901,16.301,34.901,36.402   C696.499,67.598,681.999,83.898,661.598,83.898z M661.598,23.895c-12.401,0-20.502,10.601-20.502,23.602   c0,13,8.101,23.601,20.502,23.601c12.4,0,20.501-10.601,20.501-23.601C682.099,34.496,673.998,23.895,661.598,23.895z",
+                  "duration": 600
+              },
+              {
+                  "path": "M766.598,11.994l-26.802,30.002l27.401,41.002h-17.001l-19.601-30.802l-8.801,9.9v20.901h-14.401V11.994h14.401v30.202   l26.201-30.202H766.598z",
+                  "duration": 600
+              }
+          ],
+          "dimensions": {
+              "width": 783,
+              "height": 96
+          }
+      }
+  };
+
+
+  /*
+   Setup and Paint your lazyline!
+   */
+
+   $(document).ready(function(){
+   $('#icon').lazylinepainter(
+   {
+      "svgData": pathObj,
+      "strokeWidth": 2,
+      "strokeColor": "#e09b99"
+  }).lazylinepainter('paint');
+   });

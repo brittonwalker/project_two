@@ -160,3 +160,6 @@ input:not([type=submit]) {
   margin: 10px;
   font-family: Helvetica;
 }
+#draw {
+  border: 1px solid black;
+}
