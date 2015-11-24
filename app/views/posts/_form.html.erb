@@ -1,16 +1,17 @@
 <div class="container">
   <div class="post">
-<%= form_for @post do |f| %>
-  <%= f.label :title, class: "form_title" %>
-  <%= f.text_area :title, class: "form_title"%>
+    <%= form_for @post do |f| %>
+      <%= f.label :title, class: "form_title" %>
+      <%= f.text_area :title, class: "form_title"%>
 
-  <%= f.label :body, class: "form_body" %>
-  <%= f.text_field :body, class: "form_body" %>
+      <%= f.label :body, class: "form_body" %>
+      <%= f.text_field :body, class: "form_body" %>
 
-  <%#= f.label :img_url, class: "form_body" %>
-  <%#= f.text_area :img_url, class: "form_body" %>
+      <!-- NHO: remember to remove commented out/unused code  -->
+      <%#= f.label :img_url, class: "form_body" %>
+      <%#= f.text_area :img_url, class: "form_body" %>
 
-  <%= f.submit %>
-<% end %>
+      <%= f.submit %>
+    <% end %>
   </div>
 </div>

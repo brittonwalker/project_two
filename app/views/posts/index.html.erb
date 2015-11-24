@@ -1,43 +1,45 @@
+<!-- NHO: ran code through atom's beautify package to format indentation -->
 <div class="container">
-<div class="title post element">
-<%= link_to 'New Post', new_post_path(@post) %>
-</div>
-
-<% @posts.each do |post| %>
-<div class="post">
-  <div class="title element">
-
-    <div class="create"><%= post.user.email %> said: </div><%= post.title %>
-  </div>
-  <div class="body">
-
-    <%#= image_tag post.img_url %>
-
-    <%= post.body%>
-
+  <div class="title post element">
+    <%= link_to 'New Post', new_post_path(@post) %>
   </div>
 
-  <% post.comments.each do |comment| %>
-  <div class="comments">
-  <%= comment.user.email + " said : "%><%= comment.content + "   "%><%= link_to 'Edit', edit_post_comment_path(post, comment) %><br>
-  </div>
-
-  <% end %>
-  <div class="body">
-
-    <%= form_for([post, @comment]) do |f| %>
-      <div class="flex">
-        <%= f.text_field :content %>
-        <%= f.submit 'Comment', class: 'button element' %>
+  <% @posts.each do |post| %>
+    <div class="post">
+      <div class="title element">
+        <div class="create"><%= post.user.email %>
+          said:
+        </div><%= post.title %>
       </div>
+      <div class="body">
+
+        <%#= image_tag post.img_url %>  <!-- NHO: Did we ever get this working? Would be happy to pair on this if you want! -->
+
+        <%= post.body%>
+
+      </div>
+
+      <% post.comments.each do |comment| %>
+      <div class="comments">
+        <!-- NHO: how could we use CanCanCan's view helpers or logic to hide this link from those without permission?  -->
+        <%= comment.user.email + " said : "%><%= comment.content + "   "%><%= link_to 'Edit', edit_post_comment_path(post, comment) %><br>
+      </div>
+
+      <% end %>
+      <div class="body">
+
+        <%= form_for([post, @comment]) do |f| %>
+          <div class="flex">
+            <%= f.text_field :content %>
+            <%= f.submit 'Comment', class: 'button element' %>
+          </div>
         <% end %>
-  <% if can? :update, post %>
-  <%= link_to 'Edit Post', edit_post_path(post)%>
+          <!-- NHO: nice! -->
+        <% if can? :update, post %>
+          <%= link_to 'Edit Post', edit_post_path(post)%>
+        <% end %>
+      </div>
+    </div>
   <% end %>
-  </div>
 </div>
-
-<% end %>
-
-
-</div>
+<!-- NHO: would recommend commenting your code to improve readibility, visual seperation of concerns  -->

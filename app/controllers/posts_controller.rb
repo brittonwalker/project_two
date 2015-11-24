@@ -1,14 +1,14 @@
 class PostsController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource # NHO: This helper can be utilized to DRY up our controller code, let's take advantage!
 
   def index
-    @posts = Post.order('updated_at DESC').all
-    @post = Post.where(params[:id])
+    @posts = Post.order('updated_at DESC') # NHO: this works! Have also seen. Post.all.order('updated_at DESC')
+    @post = Post.where(params[:id]) # NHO: I think we want `Post.find` to grab the one post here.
     @comment = Comment.new
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find(params[:id]) # NHO: Line no longer necessary because of load part of load_and_authorize_resource, same with edit, update, destroy
   end
 
   def new
