@@ -24,7 +24,7 @@ Loved how most of the app's action occurs on the index page, would like to see y
 
 **Meets Expectations**
 
-Please review [inline code comments](https://github.com/bwalker/project_two/compare/master...nolds9:feedback)
+Please review [inline code comments](https://github.com/brittonwalker/project_two/compare/master...nolds9:feedback)
 prefixed with my initials: `NHO` for detailed feedback.
 
 ## Deployment and Functionality
