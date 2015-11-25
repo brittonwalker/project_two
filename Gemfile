@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 
 gem 'cancancan', '~> 1.10'
 
+gem 'seed_dump'
+
 gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
