@@ -164,7 +164,7 @@ input:not([type=submit]) {
   border: 1px solid black;
 }
 
-img {
+.image {
   margin: 0 auto;
   max-width: 600px;
 }
