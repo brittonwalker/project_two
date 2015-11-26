@@ -1,43 +1,44 @@
 <div class="container">
-<div class="title post element">
-<%= link_to 'New Post', new_post_path(@post) %>
-</div>
-
-<% @posts.each do |post| %>
-<div class="post">
-  <div class="title element">
-
-    <div class="create"><%= post.user.email %> said: </div><%= post.title %>
-  </div>
-  <div class="body">
-
-    <%= image_tag post.img_url, class: "image" %><br>
-
-    <%= post.body%>
-
+  <div class="title post element">
+    <%= link_to 'New Post', new_post_path(@post) %>
   </div>
 
-  <% post.comments.each do |comment| %>
-  <div class="comments">
-  <%= comment.user.email + " said : "%><%= comment.content + "   "%><%= link_to 'Edit', edit_post_comment_path(post, comment) %><br>
-  </div>
+  <% @posts.each do |post| %>
+  <div class="post">
+    <div class="title element">
 
-  <% end %>
-  <div class="body">
+      <div class="create"><%= post.user.email %>
+        said:
+      </div><%= post.title %>
+    </div>
+    <div class="body">
 
-    <%= form_for([post, @comment]) do |f| %>
+      <%= image_tag post.img_url, class: "image" %><br>
+
+      <%= post.body%>
+
+    </div>
+
+    <% post.comments.each do |comment| %>
+    <div class="comments">
+      <%= comment.user.email + " said : "%><%= comment.content + "   "%><%= link_to 'Edit', edit_post_comment_path(post, comment) %><br>
+    </div>
+
+    <% end %>
+    <div class="body">
+
+      <%= form_for([post, @comment]) do |f| %>
       <div class="flex">
         <%= f.text_field :content %>
         <%= f.submit 'Comment', class: 'button element' %>
       </div>
-        <% end %>
-  <% if can? :update, post %>
-  <%= link_to 'Edit Post', edit_post_path(post)%>
-  <% end %>
+      <% end %>
+      <% if can? :update, post %>
+      <%= link_to 'Edit Post', edit_post_path(post)%>
+      <% end %>
+    </div>
   </div>
-</div>
 
-<% end %>
-
+  <% end %>
 
 </div>

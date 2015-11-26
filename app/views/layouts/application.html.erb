@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Not Facebook</title>
   <script src="js/jquery.lazylinepainter-1.1.min.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
 </head>
+
 <body>
 
   <!-- Nav Bar -->
@@ -30,9 +32,9 @@
 
     <% if current_user %>
       <%= current_user.email %>
-    <% else %>
-      <%= 'You are not signed in' %>
-    <% end %>
+        <% else %>
+          <%= 'You are not signed in' %>
+            <% end %>
 
   </div>
 
@@ -40,7 +42,7 @@
 
   <!-- Body -->
   <div class="container">
-  <div class="element" id="icon">  </div>
+    <div class="element" id="icon"> </div>
     <p class="notice">
       <%= notice %>
     </p>
@@ -55,4 +57,5 @@
 
 
 </body>
+
 </html>

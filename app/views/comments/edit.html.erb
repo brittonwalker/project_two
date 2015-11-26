@@ -1,9 +1,9 @@
 <div class="body">
 
   <%= form_for([@post, @comment]) do |f| %>
-    <div class="flex">
-      <%= f.text_field :content %>
-      <%= f.submit 'Comment', class: 'button element' %>
-    </div>
-      <% end %>
+  <div class="flex">
+    <%= f.text_field :content %>
+    <%= f.submit 'Comment', class: 'button element' %>
+  </div>
+  <% end %>
 </div>
