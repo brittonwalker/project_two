@@ -104,21 +104,27 @@ a {
 
 /*FORM STYLING*/
 
-input {
-  margin: 0 auto;
-}
 .form_title {
-  width: 300px;
-  /*display: block;*/
-  background-color: white;
+  display: block;
+  width: 90%;
   margin: 0 auto;
 }
 textarea:focus, input:focus {
   border: 2px solid #900;
 }
 .form_body {
-  margin: 0 auto;
+  display: block;
   width: 90%;
+  margin: 0 auto;
+}
+
+.image_upload {
+  margin: 5%;
+}
+#float_right {
+  position: static;
+  float: right;
+  margin-right: 5%;
 }
 
 /*COMMENT STYLING*/
@@ -129,7 +135,7 @@ textarea:focus, input:focus {
   margin: 10px 0;
   font-size: 20px;
 }
-input:not([type=submit]) {
+.new_comment input:not([type=submit]) {
   margin: 10px 0;
   outline: none;
   padding: 0;

@@ -10,9 +10,9 @@
     <%= f.label :img_url, class: "form_body" %>
     <%= f.text_field :img_url, class: "form_body" %>
 
-    <%= f.file_field :image %>
+    <%= f.file_field :image, class: "image_upload" %>
 
-    <%= f.submit %>
+    <%= f.submit 'Create Post', class: "button element", id: "float_right" %>
     <% end %>
   </div>
 </div>
