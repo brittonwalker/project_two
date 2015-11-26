@@ -1,6 +1,12 @@
 source 'https://rubygems.org'
 
 
+gem "carrierwave"
+
+gem 'fog'
+
+gem 'figaro'
+
 gem 'cancancan', '~> 1.10'
 
 gem 'seed_dump'
