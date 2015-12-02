@@ -23,7 +23,7 @@
 
     <% post.comments.each do |comment| %>
     <div class="comments">
-      <%= comment.user.email + " said : "%><%= comment.content + "   "%><%#= link_to 'Edit', edit_post_comment_path(post, comment) %><br>
+      <%= comment.user.email + " said : "%><%= comment.content + "   "%><%= link_to 'Edit', edit_post_comment_path(post, comment) %><br>
     </div>
 
     <% end %>
